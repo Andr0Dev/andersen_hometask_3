@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Image Loader</string>
+    <string name="enter_size_of_image">Enter size of image</string>
+    <string name="download_image_with_picasso">Download image with Picasso</string>
+    <string name="standard_download">Standard download</string>
+    <string name="description">Random uploaded photo</string>
+</resources>

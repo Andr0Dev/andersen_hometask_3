@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_width">150dp</dimen>
+    <dimen name="view_height">40dp</dimen>
+    <dimen name="margin_start">8dp</dimen>
+    <dimen name="margin_top">8dp</dimen>
+    <dimen name="view_margin_start">8dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="border_width">152dp</dimen>
+    <dimen name="border_height">81dp</dimen>
+    <dimen name="border_height_vertical">121dp</dimen>
+    <dimen name="white_strip_margin_top">1dp</dimen>
+    <dimen name="view_width_vertical">50dp</dimen>
+    <dimen name="view_height_vertical">120dp</dimen>
+    <dimen name="margin_top_colombia">40dp</dimen>
+    <dimen name="padding">2dp</dimen>
+    <dimen name="constrained_view_width">100dp</dimen>
+    <dimen name="constrained_view_height">25dp</dimen>
+    <dimen name="constrained_height">145dp</dimen>
+    <dimen name="view_height_cross">60dp</dimen>
+    <dimen name="view_width_cross">60dp</dimen>
+</resources>
