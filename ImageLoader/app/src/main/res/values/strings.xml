@@ -4,4 +4,14 @@
     <string name="download_image_with_picasso">Download image with Picasso</string>
     <string name="standard_download">Standard download</string>
     <string name="description">Random uploaded photo</string>
+    <string name="permission_required">Permission required</string>
+    <string name="message">Permission required to save photos from the Web.</string>
+    <string name="positive_button_title">Allow</string>
+    <string name="negative_button_title">Deny</string>
+    <string name="toast_message">You denied saving permission</string>
+    <string name="status_failed">Download has been failed, please try again</string>
+    <string name="status_paused">Paused</string>
+    <string name="status_pending">Pending</string>
+    <string name="running">Downloading…</string>
+    <string name="else_variant">There\'s nothing to download</string>
 </resources>

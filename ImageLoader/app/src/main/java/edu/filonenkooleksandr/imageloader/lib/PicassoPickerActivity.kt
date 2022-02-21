@@ -53,16 +53,18 @@ class PicassoPickerActivity : AppCompatActivity() {
                 )
             ) {
                 AlertDialog.Builder(this)
-                    .setTitle("Permission required")
-                    .setMessage("Permission required to save photos from the Web.")
-                    .setPositiveButton("Allow") { dialog, id ->
+                    .setTitle(getString(R.string.permission_required))
+                    .setMessage(getString(R.string.message))
+                    .setPositiveButton(getString(R.string.positive_button_title)) { dialog, id ->
                         ActivityCompat.requestPermissions(
                             this,
                             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
                             REQUEST_WRITE_EXTERNAL_STORAGE
                         )
                     }
-                    .setNegativeButton("Deny") { dialog, id -> dialog.cancel() }
+                    .setNegativeButton(getString(R.string.negative_button_title)) { dialog, id ->
+                        dialog.cancel()
+                    }
                     .show()
             } else {
                 ActivityCompat.requestPermissions(
@@ -89,7 +91,7 @@ class PicassoPickerActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(
                         this,
-                        "You denied saving permission",
+                        getString(R.string.toast_message),
                         Toast.LENGTH_LONG
                     )
                         .show()
@@ -108,15 +110,15 @@ class PicassoPickerActivity : AppCompatActivity() {
 
     private fun statusMessage(url: String, directory: File, status: Int): String =
         when (status) {
-            DownloadManager.STATUS_FAILED -> "Download has been failed, please try again"
-            DownloadManager.STATUS_PAUSED -> "Paused"
-            DownloadManager.STATUS_PENDING -> "Pending"
-            DownloadManager.STATUS_RUNNING -> "Downloading..."
+            DownloadManager.STATUS_FAILED -> getString(R.string.status_failed)
+            DownloadManager.STATUS_PAUSED -> getString(R.string.status_paused)
+            DownloadManager.STATUS_PENDING -> getString(R.string.status_pending)
+            DownloadManager.STATUS_RUNNING -> getString(R.string.running)
             DownloadManager.STATUS_SUCCESSFUL ->
                 "Image downloaded successfully in $directory" + File.separator + url.substring(
                     url.lastIndexOf("/") + 1
                 )
-            else -> "There's nothing to download"
+            else -> getString(R.string.else_variant)
         }
 
     companion object {

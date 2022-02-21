@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
+import edu.filonenkooleksandr.imageloader.R
 import edu.filonenkooleksandr.imageloader.databinding.ActivityStandardBinding
 import java.io.File
 
@@ -50,9 +51,9 @@ class StandardActivity : AppCompatActivity() {
                 )
             ) {
                 AlertDialog.Builder(this)
-                    .setTitle("Permission required")
-                    .setMessage("Permission required to save photos from the Web.")
-                    .setPositiveButton("Allow") { dialog, id ->
+                    .setTitle(getString(R.string.permission_required))
+                    .setMessage(getString(R.string.message))
+                    .setPositiveButton(getString(R.string.positive_button_title)) { dialog, id ->
                         ActivityCompat.requestPermissions(
                             this,
                             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
@@ -153,10 +154,10 @@ class StandardActivity : AppCompatActivity() {
 
     private fun statusMessage(url: String, directory: File, status: Int): String =
         when (status) {
-            DownloadManager.STATUS_FAILED -> "Download has been failed, please try again"
-            DownloadManager.STATUS_PAUSED -> "Paused"
-            DownloadManager.STATUS_PENDING -> "Pending"
-            DownloadManager.STATUS_RUNNING -> "Downloading..."
+            DownloadManager.STATUS_FAILED -> getString(R.string.status_failed)
+            DownloadManager.STATUS_PAUSED -> getString(R.string.status_paused)
+            DownloadManager.STATUS_PENDING -> getString(R.string.status_pending)
+            DownloadManager.STATUS_RUNNING -> getString(R.string.running)
             DownloadManager.STATUS_SUCCESSFUL ->
                 "Image downloaded successfully in $directory" + File.separator + url.substring(
                     url.lastIndexOf("/") + 1
